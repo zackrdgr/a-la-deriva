@@ -1,11 +1,11 @@
-const CACHE = 'aladeriva-v3';
+const CACHE = 'aladeriva-v4';
 const ASSETS = [
   './',
   './index.html',
   './manifest.webmanifest',
-  './icon-180.png',
-  './icon-192.png',
-  './icon-512.png'
+  './icon-180-2.png',
+  './icon-192-2.png',
+  './icon-512-2.png'
 ];
 
 self.addEventListener('install', function (e) {
