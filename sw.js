@@ -1,4 +1,4 @@
-const CACHE = 'aladeriva-v5';
+const CACHE = 'aladeriva-v6';
 const ASSETS = [
   './',
   './index.html',
