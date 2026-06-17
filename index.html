@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 <title>A la Deriva</title>
 <meta name="description" content="A la Deriva. A 5-night Western Caribbean cruise guide for Pratikshya, Zack, and Tori. Royal Caribbean, Radiance of the Seas, June 2026.">
 <meta name="theme-color" content="#E8703A">
@@ -2541,6 +2541,16 @@
    }
    seal.addEventListener('click', start);
    seal.addEventListener('touchend', start, {passive:true});
+ })();
+
+ // ===== Lock zoom (disable pinch + double-tap zoom) =====
+ (function(){
+   var de = document.documentElement;
+   de.style.touchAction = 'manipulation';
+   if (document.body) document.body.style.touchAction = 'manipulation';
+   ['gesturestart','gesturechange','gestureend'].forEach(function(ev){
+     document.addEventListener(ev, function(e){ e.preventDefault(); }, {passive:false});
+   });
  })();
 
  // ===== Hamburger menu =====
